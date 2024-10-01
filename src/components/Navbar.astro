@@ -1,0 +1,83 @@
+---
+
+---
+
+<nav>
+  <ul class="nav">
+    <li class="logo">
+      <a href="/" class="name">Aníbal Reyes</a>
+    </li>
+    <li></li>
+    <li class="options">
+      <ul>
+        <li>
+          <a href="/projects"> Proyectos </a>
+        </li>
+
+        <li>
+          <a href="/about"> Acerca de </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+  }
+  nav {
+    background-color: #4ade80;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    top: 0;
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: 5fr 4fr 2fr;
+    list-style: none;
+  }
+  .nav > li {
+    padding: 25px;
+  }
+
+  .logo {
+    position: relative;
+    font-size: larger;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    cursor: pointer;
+  } 
+
+  .logo::after {
+  }
+
+  .options {
+    justify-self: end;
+  } 
+  .options ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+  }
+
+  .name {
+    position: relative;
+  }
+  li .name::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 1px;
+    background: #000;
+  }
+
+  li:hover .name::after {
+    width: 100%;
+  }
+</style>

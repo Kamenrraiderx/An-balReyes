@@ -1,0 +1,44 @@
+---
+import { Mail } from 'lucide-astro';
+import { Github } from 'lucide-astro';
+import { Linkedin } from 'lucide-astro';
+---
+
+<section class="container">
+  <ul>
+    <li><Linkedin/></li>
+    <li><Github/></li>
+    <li><Mail/></li>
+  </ul>
+</section>
+
+<style>
+  .container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index:1;
+    left: 0px;
+    bottom: 25vh;
+    height: calc(100vh/2);
+    background: #4ade80;
+    padding: 20px;
+
+  }
+
+  ul{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  li{
+    cursor: pointer;
+  }
+  li:hover{
+    color:#aaa;
+  }
+</style>

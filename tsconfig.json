@@ -1,3 +1,15 @@
 {
+  "compilerOptions": {
+    "module": "ESNext",  // Usa ESNext o ES6 para módulos ES
+    "target": "ESNext",  // Elige una versión de ES que soporte import/export
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*":["src/components/*"],
+    }
+  },
   "extends": "astro/tsconfigs/strict"
 }

@@ -1,0 +1,56 @@
+---
+import HabilitieIcon from './HabilitieIcon.astro';
+import SectionContainer from '../layouts/SectionContainer.astro';
+---
+
+<SectionContainer>
+  <div class="container">
+    <section>
+      <h1>Fortalezas y Habilidades</h1>
+      <p>
+        Mis fortalezas incluyen el pensamiento crítico y la capacidad de
+        colaborar en equipos multidisciplinarios. Tengo experiencia en
+        desarrollo de software con lenguajes como Java y Python, así como en
+        tecnologías modernas como Next.js y Go. Además, destaco por mi habilidad
+        para comunicar ideas técnicas de manera clara, siempre enfocado en
+        soluciones eficientes y usables.
+      </p>
+
+      <div class="habilitiesGrid">
+        <HabilitieIcon />
+        <HabilitieIcon />
+        <HabilitieIcon />
+        <HabilitieIcon />
+        <HabilitieIcon />
+        <HabilitieIcon />
+        <HabilitieIcon />
+        <HabilitieIcon />
+      </div>
+    </section>
+  </div>
+</SectionContainer>
+<style>
+  .container {
+    scroll-snap-align: center;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  h1 {
+    margin-bottom:80px;
+  }
+  p {
+    margin-bottom: 80px;
+  }
+  section {
+    width: calc(100vw / 2);
+  }
+  .habilitiesGrid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: 50px 50px;
+    gap: 30px;
+  }
+</style>

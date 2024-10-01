@@ -1,0 +1,47 @@
+---
+import SectionContainer from "../layouts/SectionContainer.astro";
+import Input from "./Input.astro";
+
+
+---
+<SectionContainer>
+    <div class="container">
+        <div>
+            <h1>¡Contactame!</h1>
+            <form action="">
+                <Input placeholder="Correo eléctronico" type="email"/>
+                <Input placeholder="Mensaje" type="text"/>
+                <input class="button" type="submit" value="Enviar" >
+            </form>
+        </div>
+    </div>
+</SectionContainer>
+
+<style>
+    h1{
+        margin-bottom: 80px;
+    }
+    .container{
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        height: 100%;
+    }
+    form{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+
+    .button{
+        padding-top:10px;
+        padding-bottom:10px;
+        border:none;
+        color:white;
+        font-weight: bolder;
+        background: #4ade80;
+        cursor: pointer;
+    }
+</style>

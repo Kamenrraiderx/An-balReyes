@@ -1,0 +1,56 @@
+---
+import SectionContainer from '../layouts/SectionContainer.astro';
+---
+
+<SectionContainer>
+  <div class="container">
+    <div>
+      <h1>Objetivos Profesionales</h1>
+      <div>
+        <section class="section1">
+          <h2>A Corto Plazo</h2>
+          <p>
+            Especializarme en el desarrollo front-end/back-end, con un enfoque
+            en la protección de datos y el análisis de riesgos. A largo plazo,
+            aspiro a liderar proyectos de innovación tecnológica que integren
+            soluciones de seguridad en entornos de desarrollo de software,
+            contribuyendo a crear plataformas más seguras y eficientes para
+            empresas de diversos sectores.
+          </p>
+        </section>
+        <section class="section2">
+          <h2>A Largo Plazo</h2>
+          <p>
+            Quiero profundizar en el campo de la computación cuántica, un área
+            emergente que considero clave para el futuro. Esta tecnología tiene
+            el potencial de revolucionar industrias enteras mediante la
+            resolución de problemas complejos, como la optimización y la
+            criptografía. Mi visión es adquirir conocimientos sólidos en este
+            campo y explorar su capacidad para transformar procesos
+            empresariales y científicos, contribuyendo al desarrollo de
+            aplicaciones prácticas en la próxima era tecnológica.
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+</SectionContainer>
+
+<style>
+  .container {
+    scroll-snap-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .section1,
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 30px;
+    margin-top: 80px;
+  }
+  .section2 {
+    align-items: end;
+  }
+</style>

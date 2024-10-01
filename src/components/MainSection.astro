@@ -1,0 +1,113 @@
+---
+import SectionContainer from '../layouts/SectionContainer.astro';
+---
+
+<SectionContainer>
+  <div class="container">
+    <section class="section1">
+      <div class="decoration">
+        <div class="image">
+          <img src="/images/profile.png" alt="">
+        </div>
+      </div>
+      <div>
+        <h1>Aníbal Reyes.</h1>
+        <p>Ingeniero en sistemas</p>
+      </div>
+    </section>
+    <section class="section2">
+      <div>
+        <h4>Full stack developer</h4>
+        <h2>Transformando ideas en soluciones digitales efectivas</h2>
+      </div>
+      <p>
+        Con experiencia en frontend y backend, he trabajado en proyectos reales
+        que van desde interfaces modernas hasta arquitecturas escalables y
+        administración de bases de datos. Mi enfoque práctico y dominio de
+        diversas herramientas me permiten ofrecer soluciones eficientes y de
+        alto impacto.
+      </p>
+      <button> Descargar CV </button>
+    </section>
+  </div>
+</SectionContainer>
+
+<style>
+  img{
+    height: 300px;
+      
+  }
+  .image {
+    background: #111;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .decoration{
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+  }
+  .decoration::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -1px;
+    z-index: -1;
+    border:10px dashed #4ade80;
+    border-radius: 100%; 
+    animation: rot 80s infinite ;
+  }
+
+  @keyframes rot {
+    0{
+      transform: rotate(0deg);;
+    }
+    100%{
+      transform: rotate(360deg);;
+    }
+  }
+
+  .container {
+    scroll-snap-align: center;
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  h2 {
+    margin-top: 20px;
+  }
+
+  .section1,
+  .section2 {
+    width: calc(100vw / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+  }
+  .section1 {
+    align-items: center;
+  }
+  .section2 {
+    gap: 60px;
+  }
+
+  
+
+  button {
+    width: 100%;
+    background: #4ade80;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+</style>

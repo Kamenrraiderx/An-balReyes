@@ -1,0 +1,60 @@
+---
+interface Props {
+  placeholder:string;
+  type:"email"|"text";
+}
+const {placeholder,type} = Astro.props
+---
+
+<div class="inputContainer">
+  <div class="inputBorder"></div>
+  <input class="input" type={type} />
+  <span class="placeHolder">{placeholder}</span>
+</div>
+
+<style>
+  .inputContainer {
+    position: relative;
+    width: 100%;
+  }
+  .inputBorder::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: red;
+    width: 2px;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease-in-out;
+  }
+  .placeHolder {
+    font-weight: 300;
+    font-size: 18px;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    z-index: -1;
+    transition:
+      transform 0.5s ease-in-out,
+      bottom 0.5s ease-in-out;
+  }
+  .input:focus + .placeHolder {
+    bottom: 30px;
+    transform: scale(0.9);
+  }
+  .input:focus + .inputBorder::after {
+    width: 100%;
+  }
+  .input {
+    font-weight: 300;
+    font-size: 18px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    position: relative;
+    width: 100%;
+  }
+</style>
